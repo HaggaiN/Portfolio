@@ -608,34 +608,190 @@ footer {
     transform: scale(1.05);
 }
 /* =========================
-   ABOUT CONTENT
+   ABOUT
 ========================= */
 
-.about-content {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 60px;
-    align-items: center;
+.about-container {
+    max-width: 900px;
+    margin: auto;
 }
 
-.about-text p {
-    color: #aaaaaa;
-    font-size: 16px;
-    margin-bottom: 20px;
+.about-intro {
+    max-width: 750px;
+    margin: 0 auto 60px;
+    text-align: center;
 }
+
+.about-lead {
+    color: #aaaaaa;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.about-lead strong {
+    color: #ffffff;
+}
+
+
+/* =========================
+   JOURNEY
+========================= */
+
+.journey {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.journey::before {
+    content: "";
+    position: absolute;
+    left: 24px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: #222222;
+}
+
+.journey-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 25px;
+    margin-bottom: 45px;
+}
+
+.journey-number {
+    position: relative;
+    z-index: 2;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #111111;
+    border: 2px solid #00a8ff;
+
+    color: #00a8ff;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.journey-content {
+    padding: 28px;
+
+    background: #111111;
+    border: 1px solid #222222;
+    border-radius: 12px;
+
+    transition: 0.3s ease;
+}
+
+.journey-content:hover {
+    transform: translateX(5px);
+    border-color: #00a8ff;
+    box-shadow: 0 10px 30px rgba(0, 168, 255, 0.06);
+}
+
+.journey-year {
+    display: inline-block;
+    margin-bottom: 8px;
+
+    color: #00a8ff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.journey-content h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.journey-content p {
+    color: #999999;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.journey-content p strong {
+    color: #dddddd;
+}
+
+
+/* =========================
+   TECHNOLOGIES
+========================= */
+
+.journey-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.journey-tech span {
+    padding: 6px 11px;
+
+    background: rgba(0, 168, 255, 0.08);
+    border: 1px solid rgba(0, 168, 255, 0.2);
+    border-radius: 20px;
+
+    color: #00a8ff;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   ACHIEVEMENT
+========================= */
+
+.achievement {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 20px;
+    padding-top: 18px;
+
+    border-top: 1px solid #222222;
+
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+.achievement i {
+    color: #00a8ff;
+}
+
+.achievement strong {
+    color: #ffffff;
+}
+
+
+/* =========================
+   ABOUT STATS
+========================= */
 
 .about-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+    margin-top: 60px;
 }
 
 .stat {
     padding: 25px 15px;
     text-align: center;
 
-    background: #111;
-    border: 1px solid #222;
+    background: #111111;
+    border: 1px solid #222222;
     border-radius: 10px;
 
     transition: 0.3s;
@@ -657,10 +813,35 @@ footer {
     font-size: 13px;
 }
 
-
 /* Mobile */
 
 @media (max-width: 768px) {
+    .about-intro {
+    margin-bottom: 45px;
+}
+
+.journey::before {
+    left: 19px;
+}
+
+.journey-item {
+    grid-template-columns: 40px 1fr;
+    gap: 15px;
+}
+
+.journey-number {
+    width: 40px;
+    height: 40px;
+    font-size: 11px;
+}
+
+.journey-content {
+    padding: 22px;
+}
+
+.about-stats {
+    grid-template-columns: 1fr;
+}
 
     .about-content {
         grid-template-columns: 1fr;
